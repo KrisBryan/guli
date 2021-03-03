@@ -1,5 +1,7 @@
 server:
   port: 8110
+
+
 spring:
   profiles:
     active: dev
@@ -10,6 +12,9 @@ spring:
     password: root
     url: jdbc:mysql://localhost:3306/guli_edu?serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd
 #mybatis日志
 mybatis-plus:
   configuration:
