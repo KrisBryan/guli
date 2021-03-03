@@ -16,7 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * Created by Kris on 2021/3/3
  */
 @Configuration
-@EnableSwagger2
+@EnableSwagger2//启用swagger2
 public class Swagger2Config {
     @Bean
     public Docket webApiConfig(){
