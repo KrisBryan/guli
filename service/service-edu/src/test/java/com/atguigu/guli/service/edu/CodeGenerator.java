@@ -16,7 +16,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 /**
- * description:
+ * description:MybatisPlus的逆向工程
  * Created by Kris on 2021/3/3
  */
 public class CodeGenerator {
@@ -55,7 +55,7 @@ public class CodeGenerator {
         pc.setModuleName(moduleName); //模块名
         pc.setParent("com.atguigu.guli.service");
         pc.setController("controller");
-        pc.setEntity("entity");
+        pc.setEntity("pojo");
         pc.setService("service");
         pc.setMapper("mapper");
         mpg.setPackageInfo(pc);
