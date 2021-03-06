@@ -18,6 +18,7 @@ import java.util.List;
  * description:
  * Created by Kris on 2021/3/3
  */
+@CrossOrigin
 @Slf4j
 @Api(tags = "讲师管理")
 @RestController
