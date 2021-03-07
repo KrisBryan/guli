@@ -2,6 +2,7 @@ package com.atguigu.guli.service.edu.controller.admin;
 
 import com.atguigu.guli.service.base.result.R;
 import com.atguigu.guli.service.edu.entity.Teacher;
+import com.atguigu.guli.service.edu.entity.query.TeacherQuery;
 import com.atguigu.guli.service.edu.service.TeacherService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -52,9 +53,12 @@ public class TeacherConrtoller {
 
     @ApiOperation("讲师列表分页")
     @GetMapping("/list/{page}/{limit}")
-    public R page(@ApiParam(value = "当前页码", required = true) @PathVariable Long page, @ApiParam(value = "每页记录数", required = true) @PathVariable Long limit) {
-        Page<Teacher> pageParam = new Page<>(page, limit);
-        IPage<Teacher> pageModel = teacherService.page(pageParam);
+    public R page(@ApiParam(value = "当前页码", required = true) @PathVariable Long page,
+                  @ApiParam(value = "每页记录数", required = true) @PathVariable Long limit,
+                  TeacherQuery teacherQuery) {
+        Page<Teacher> pageModel=teacherService.selectByPage(page, limit, teacherQuery);
+//        Page<Teacher> pageParam = new Page<>(page, limit);
+//        IPage<Teacher> pageModel = teacherService.page(pageParam);
         return R.ok().data("pageModel", pageModel);
     }
 
