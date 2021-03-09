@@ -1,0 +1,23 @@
+# 应用名称:注册中心和配置中心
+spring:
+  application:
+    name: service-oss
+  profiles:
+    active: dev
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd
+# 端口号
+server:
+  port: 8120
+logging:
+  level:
+    # 设置整个项目的日志级别
+    root: info
+aliyun:
+  oss:
+    schema: http://
+    endpoint: oss-cn-shanghai.aliyuncs.com
+    keyId: LTAI4GHUond49c588PwJYsSa
+    keySecret: jqexWIY7JEPqufYAU8IKGoLNQwdXHD
+    bucketName: kris-guli-project

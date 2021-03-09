@@ -50,7 +50,15 @@ public class TeacherConrtoller {
         }
         return R.error().message("删除失败，数据不存在");
     }
-
+    @ApiOperation("根据复选框删除ID")
+    @DeleteMapping("/deleteS")
+    public R deleteBySelect(@ApiParam(value = "多选教师ID", required = true)@RequestBody List<String> idList) {
+        boolean removeByIds = teacherService.removeByIds(idList);
+        if (removeByIds) {
+            return R.ok().message("删除成功");
+        }
+        return R.ok().message("删除失败");
+    }
     @ApiOperation("讲师列表分页")
     @GetMapping("/list/{page}/{limit}")
     public R page(@ApiParam(value = "当前页码", required = true) @PathVariable Long page,

@@ -16,9 +16,9 @@ spring:
     time-zone: Asia/Shanghai
     date-format: yyyy-MM-dd
 #mybatis日志
-#mybatis-plus:
-#  configuration:
-#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 logging:
   level:
