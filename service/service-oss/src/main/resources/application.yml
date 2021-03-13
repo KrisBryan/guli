@@ -18,6 +18,6 @@ aliyun:
   oss:
     schema: http://
     endpoint: oss-cn-shanghai.aliyuncs.com
-    keyId: LTAI4GHUond49c588PwJYsSa
-    keySecret: jqexWIY7JEPqufYAU8IKGoLNQwdXHD
+    keyId: 
+    keySecret: 
     bucketName: kris-guli-project
