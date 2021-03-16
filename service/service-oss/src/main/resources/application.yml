@@ -17,7 +17,7 @@ logging:
 aliyun:
   oss:
     schema: http://
-    endpoint: oss-cn-shanghai.aliyuncs.com
+    endpoint: 
     keyId: 
     keySecret: 
-    bucketName: kris-guli-project
+    bucketName: 
